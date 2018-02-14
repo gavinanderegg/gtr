@@ -15,7 +15,8 @@ class Projects(_Service):
     _FIELD_MAP = {
         'project_ref': 'pro.gr',
         'project_title': 'pro.t',
-        'project_abs': 'pro.a'
+        'project_abs': 'pro.a',
+        'project_topic': 'pro.rt'
     }
 
     def __init__(self):
@@ -40,8 +41,9 @@ class Projects(_Service):
     def projects(self, term, field=None, **kwargs):
         """Search for projects. Defaults to project_title. Other fields
         are:
-            project_reference
-            project_abstract
+            project_ref
+            project_abs
+            project_topic
 
         Args:
           term (str): Term to search for.
